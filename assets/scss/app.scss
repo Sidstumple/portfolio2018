@@ -1,0 +1,76 @@
+@import '~matise-grid/grid', 'functions';
+
+h1 {
+	font-family: 'PT Mono', monospace;
+	font-size: grid(1);
+	& + p {
+		margin-top: rem(20);
+	}
+}
+p {
+	line-height: 1.8;
+	font-size: rem(18);
+	font-family: 'Open Sans', sans-serif;
+	&+p {
+		margin-top: rem(30);
+	}
+}
+
+.circle {
+	z-index: -1;
+	background: #D1E9EB;
+	width: grid(22);
+	height: grid(22);
+	border-radius: 100%;
+	position: fixed;
+	left: grid(-11);
+	bottom: grid(-11);
+}
+.filter {
+	background-color: white;
+	z-index: 2;
+	&:after{
+  content: '';
+	background-color: black;
+	mix-blend-mode: screen;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+	img {
+		position: absolute;
+		top: 0;
+		left: grid(-2);
+		width: auto;
+		height: 100vh;
+		filter: contrast(1.4);
+		mix-blend-mode: multiply;
+		overflow: hidden;
+	}
+}
+.background-white {
+	// background: #D1E9EB;
+	width: 100vw;
+	height: 100vh;
+}
+
+.intro {
+	color: #D1E9EB;
+	width: grid(10); float: right;
+	margin-right: grid(2);
+	margin-top: grid(4)
+}
+
+.sidebar {
+	color: white;
+	z-index: 3;
+	position: fixed;
+	bottom: 35%;
+	right: -15%;
+	transform: rotate(-90deg);
+	p {
+	font-size: rem(16);
+}
+}
