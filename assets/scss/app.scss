@@ -1,4 +1,4 @@
-@import '~matise-grid/grid', 'functions';
+@import 'colors/colors', 'henris', 'functions' ;
 
 h1 {
 	font-family: 'PT Mono', monospace;
@@ -16,47 +16,30 @@ p {
 	}
 }
 
-.circle {
-	z-index: -1;
-	background: #D1E9EB;
-	width: grid(22);
-	height: grid(22);
-	border-radius: 100%;
-	position: fixed;
-	left: grid(-11);
-	bottom: grid(-11);
-}
-.filter {
-	background-color: white;
-	z-index: 2;
-	&:after{
-  content: '';
-	background-color: black;
-	mix-blend-mode: screen;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-	img {
-		position: absolute;
-		top: 0;
-		left: grid(-2);
-		width: auto;
-		height: 100vh;
-		filter: contrast(1.4);
-		mix-blend-mode: multiply;
-		overflow: hidden;
-	}
-}
-.background-white {
-	// background: #D1E9EB;
+.container {
 	width: 100vw;
 	height: 100vh;
+	// overflow: hidden;
+}
+
+.filter {
+	background: color(Lavender);
+	position: relative;
+	z-index: -1;
+	left: -100vw;
+	width: 200vw;
+	height: 200vh;
+	svg{
+		width: 100%;
+		height: 100%;
+		color-interpolation-filters:sRGB;
+		transform: rotate(-90deg);
+		transition: 1s 2s;
+	}
 }
 
 .intro {
+	display: none;
 	color: #D1E9EB;
 	width: grid(10); float: right;
 	margin-right: grid(2);
@@ -66,7 +49,7 @@ p {
 .sidebar {
 	color: white;
 	z-index: 3;
-	position: fixed;
+	position: absolute;
 	bottom: 35%;
 	right: -15%;
 	transform: rotate(-90deg);
