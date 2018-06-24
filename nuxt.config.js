@@ -11,8 +11,9 @@ module.exports = {
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-			{rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=PT+Mono'}
+			{rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Hind:400,500,600|PT+Mono'}
 		]
+
 	},
 	/*
 	** Global CSS

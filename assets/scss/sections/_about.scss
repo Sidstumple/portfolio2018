@@ -1,0 +1,22 @@
+.intro {
+	position: absolute;
+	width: grid(10);
+	right: grid(4);
+	top: grid(4);
+	&__text{
+		clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+		transition: clip-path .8s ease-out;
+		&.show{
+			clip-path: polygon(-10% 0, 110% 0, 110% 110%, -10% 110%);
+		}
+	}
+	&.section{
+		transition: .4s $bezier;
+		right: -100vw;
+		&--active{
+			right: grid(4);
+			transition: .4s $bezier .7s;
+
+		}
+	}
+}

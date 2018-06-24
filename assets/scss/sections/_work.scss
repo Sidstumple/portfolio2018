@@ -1,0 +1,62 @@
+.work {
+	position: absolute;
+	top: grid(2);
+	left: grid(1.5);
+	&__items{
+		display: flex;
+		flex-direction: row;
+		&--small{
+			margin-left: grid(1);
+			.work__item + .work__item {
+				margin-top: grid(1);
+			}
+		}
+	}
+	&__item{
+		display: flex;
+		flex-direction: row;
+		.text {
+			color: black;
+			p{ writing-mode: vertical-rl;}
+		}
+		.image {
+			justify-content: center;
+			align-items: center;
+			&--viacom{
+				width: grid(11);
+				height: grid(11);
+				overflow: hidden;
+				display: flex;
+				img {
+					height: 100%;
+				}
+			}
+			&--bag{
+				width: grid(5);
+				height: grid(5);
+				overflow: hidden;
+				display: flex;
+				img {
+					height: 100%;
+				}
+			}
+			&--matise{
+				width: grid(5);
+				height: grid(5);
+				overflow: hidden;
+				display: flex;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&.section{
+		transition: .4s $bezier;
+		top: 100vh;
+		&--active{
+			top: grid(2);
+			transition: .4s $bezier .3s;
+		}
+	}
+}

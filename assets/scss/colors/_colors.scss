@@ -1,4 +1,29 @@
 $custom-colors: (
 "LightBlue": #D1E9EB,
-"Lavender": #7673B0
-)
+"Lavender": #7673B0,
+"Yellow": #F9D74B,
+"Orange": #DE582E,
+"Mint": #D2E8DE,
+"Pink": #CF4B52,
+"Black": #000000,
+"White": #FFFFFF
+);
+
+// Color class
+
+@each $name, $value in $custom-colors {
+	$name-lowercase: to-lower-case($name);
+	.bg-#{$name},
+	.bg-#{$name-lowercase} {
+		background-color: $value;
+		color: contra($value);
+	}
+	.text-#{$name},
+	.text-#{$name-lowercase},
+	.content .text-#{$name-lowercase} {
+		color: $value;
+		a {
+			color: $value;
+		}
+	}
+}
