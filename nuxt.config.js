@@ -29,6 +29,10 @@ module.exports = {
 	/*
 	** Build configuration
 	*/
+	plugins: [{
+		src: '~plugins/svgicon.js',
+		ssr: 'false'
+	}],
 	build: {
 		postcss: {
 			plugins: {

@@ -1,0 +1,19 @@
+// @for $i from 0 through 5{
+// 	$change: $i * 3;
+//   .icon-#{$i} {
+//     width: calc(150px + (#{$i} * 20px));
+// 		position: absolute;
+// 		top: calc(10px + (#{$i} * 15vh));
+// 	}
+// 	.icon-#{change} {
+//     width: calc(150px + (#{$i} * 20px));
+// 		position: absolute;
+// 		top: calc(10px + (#{$i} * 15vh));
+// 	}
+// }
+
+
+.icons div svg {
+	position: absolute;
+	width: 100px;
+}

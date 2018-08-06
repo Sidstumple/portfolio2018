@@ -1,6 +1,6 @@
 
 .filter {
-	position: fixed;
+	position: absolute;
 	z-index: -1;
 	transition: top .5s $bezier, left .5s $bezier .5s;
 	height: 200vh;
@@ -8,11 +8,12 @@
 	circle {
 		transition: r .7s $bezier ;
 	}
-	svg{
+	svg.container{
 		width: 100%;
 		height: 100%;
 		color-interpolation-filters:sRGB;
 	}
+
 	&.pos{
 		&--top-right { // about
 			left: -100vw;

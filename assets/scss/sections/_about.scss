@@ -11,12 +11,11 @@
 		}
 	}
 	&.section{
-		transition: .4s $bezier;
+		transition: right .4s $bezier;
 		right: -100vw;
 		&--active{
 			right: grid(4);
-			transition: .4s $bezier .7s;
-
+			transition: right .4s $bezier .7s;
 		}
 	}
 }

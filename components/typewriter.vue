@@ -42,7 +42,7 @@ export default {
 								self._data.show = true;
 								self.$emit('doneTyping');
 							}
-						}, i * 100);
+						}, i * 50);
 					})(i);
 				}
 			}

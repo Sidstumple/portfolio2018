@@ -2,7 +2,7 @@
 	<section class="container" :class="`text-${text} page-active--${activePage}`">
 
 		<div class="filter" :class="`bg-${background} pos--${position}`">
-			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" class="container">
 				<filter id="duotone">
 					<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
 						<feFuncR type="table" :tableValues="rColors"></feFuncR>
@@ -10,18 +10,23 @@
 						<feFuncB type="table" :tableValues="bColors"></feFuncB>
 						<feFuncA type="table" :tableValues="aColors"></feFuncA>
 					</feComponentTransfer>
-
 				</filter>
-				<circle cx="90vw" cy="100vh" r="50vw" :fill="color" />
-				<image x="60vw" y="0" style="filter: url(#duotone)" width="100vw" height="100vh" xlink:href="~/assets/img/cydBW.png"/>
+				<circle cx="90vw" cy="100vh" r="50vw" :fill="color"> </circle>
+				<image x="0" y="0" style="filter: url(#duotone)" width="100%" height="100vh" xlink:href="~/assets/img/cydBW.png"/>
 			</svg>
 		</div>
 
+		<div class="icons">
+			<div v-for="(icon, index) in allIcons" @mouseenter="changePosition(`${icon}-${index}`)" :key="index">
+				<svgicon :name="icon" :class="`${icon}-${index} icon-${index}`" :color="color"></svgicon>
+			</div>
+		</div>
+
 		<nav class="navigation">
-			<ul class="navigation__list">
-				<li class="navigation__item"><nuxt-link to="/#about">about</nuxt-link></li>
-				<li class="navigation__item"><nuxt-link to="/#work">work</nuxt-link></li>
-				<li class="navigation__item"><nuxt-link to="/#contact">contact</nuxt-link></li>
+			<ul class="navigation__list" :class="{'contrast' : contactActive}">
+				<li class="navigation__item" @click="checkContrast(about)"><nuxt-link to="/#about">about</nuxt-link></li>
+				<li class="navigation__item" @click="checkContrast(work)"><nuxt-link to="/#work">work</nuxt-link></li>
+				<li class="navigation__item" @click="checkContrast(contact)"><nuxt-link to="/#contact">contact</nuxt-link></li>
 			</ul>
 		</nav>
 
@@ -30,7 +35,7 @@
 			</typewriter>
 			<div :class="{show: show}" class="intro__text">
 				<p class="column small-full medium-three-quarter">Based in Amsterdam, I’m a web developer & designer with a passion for inclusive design.</p>
-				<nuxt-link to="/contact">Want to work together?</nuxt-link>
+				<nuxt-link to="#contact">Want to work together?</nuxt-link>
 			</div>
 		</div>
 
@@ -94,12 +99,16 @@
 <script>
 import Typewriter from '~/components/typewriter';
 
+import '~/assets/icons';
+
 export default {
 	components: {
 		Typewriter
 	},
 	data(){
 		return {
+			allIcons: ['design', 'logo', 'mail', 'phone', 'search'],
+			contactActive: false,
 			show: false,
 			rColors: '0.462745098 0.8196078431',
 			gColors: '0.4509803922 0.9137254902',
@@ -117,7 +126,7 @@ export default {
 		};
 	},
 	watch:{
-		$route (to, from){
+		$route (to){
 			if (to.hash == '#about') {
 				this.about = true;
 				this.work = false;
@@ -139,9 +148,22 @@ export default {
 			}
 		}
 	},
+	mounted() {
+		let allSvgIcons = document.querySelectorAll('.icons div > svg');
+
+		allSvgIcons.forEach(function (icon) {
+			let randomNumb = Math.floor((Math.random() * 300) + 100);
+			let secondRandomNumb = Math.floor((Math.random() * 20) + 1);
+			icon.style.width = `${randomNumb}px`;
+			icon.style.top = `calc(${(randomNumb - secondRandomNumb) + 100}px)`;
+			icon.style.left = `${secondRandomNumb}px`;
+		});
+	},
 	methods: {
+		checkContrast: function(active) {
+			console.log(active);
+		},
 		changeColorScheme: function(colorScheme) {
-			console.log(colorScheme);
 			if (colorScheme == 'lightblue-lavender') {
 				this.rColors = '0.462745098 0.8196078431';
 				this.gColors = '0.4509803922 0.9137254902';
@@ -171,6 +193,10 @@ export default {
 				this.text = 'black';
 				this.color = '#000000';
 			}
+		},
+		changePosition: function(icon) {
+			let hovered = document.querySelector(`.${icon}`).getBoundingClientRect();
+			console.log(hovered.top);
 		}
 	},
 

@@ -10,14 +10,16 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+		"generate-icons": "vsvg -s ./assets/svg-icons -t ./assets/icons"
   },
   "dependencies": {
     "henris": "^0.2.3",
     "matise-grid": "^1.1.8",
     "nuxt": "^1.0.0",
     "postcss": "^6.0.22",
-    "postcss-cssnext": "^3.1.0"
+    "postcss-cssnext": "^3.1.0",
+    "vue-svgicon": "^3.0.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
