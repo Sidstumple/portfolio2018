@@ -18,7 +18,7 @@
 
 		<div class="icons">
 			<div v-for="(icon, index) in allIcons" @mouseenter="changePosition(`${icon}-${index}`)" :key="index">
-				<svgicon :name="icon" :class="`${icon}-${index} icon-${index}`" :color="color"></svgicon>
+				<svgicon :name="icon" :class="`${icon}-${index} icon-${index}`" color="#ffcc00"></svgicon>
 			</div>
 		</div>
 
@@ -152,11 +152,13 @@ export default {
 		let allSvgIcons = document.querySelectorAll('.icons div > svg');
 
 		allSvgIcons.forEach(function (icon) {
-			let randomNumb = Math.floor((Math.random() * 300) + 100);
-			let secondRandomNumb = Math.floor((Math.random() * 20) + 1);
-			icon.style.width = `${randomNumb}px`;
-			icon.style.top = `calc(${(randomNumb - secondRandomNumb) + 100}px)`;
-			icon.style.left = `${secondRandomNumb}px`;
+			let sizeRandomNumber = Math.floor((Math.random() * 200) + 50);
+			let vhRandomNumber = Math.floor((Math.random() * 80) + 20);
+			let vwRandomNumber = Math.floor((Math.random() * 40) + 5);
+			icon.style.width = `${sizeRandomNumber}px`;
+			icon.style.top = `${vhRandomNumber}vh`;
+			icon.style.left = `${vwRandomNumber}vw`;
+			console.log(sizeRandomNumber, vhRandomNumber, vwRandomNumber);
 		});
 	},
 	methods: {
