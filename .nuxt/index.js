@@ -13,6 +13,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 /* Plugins */
 import nuxt_plugin_svgicon_eea7e1de from 'nuxt_plugin_svgicon_eea7e1de' // Source: ../plugins/svgicon.js
+import nuxt_plugin_vuetranslateonscroll_a4369784 from 'nuxt_plugin_vuetranslateonscroll_a4369784' // Source: ../plugins/vue-translate-on-scroll (ssr: false)
 
 
 // Component: <no-ssr>
@@ -136,6 +137,9 @@ async function createApp (ssrContext) {
   
   if (typeof nuxt_plugin_svgicon_eea7e1de === 'function') await nuxt_plugin_svgicon_eea7e1de(app.context, inject)
   
+  if (process.browser) { 
+    if (typeof nuxt_plugin_vuetranslateonscroll_a4369784 === 'function') await nuxt_plugin_vuetranslateonscroll_a4369784(app.context, inject)
+  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {

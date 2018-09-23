@@ -2,15 +2,23 @@ p {
 	margin: 0;
 }
 
+h1, h2 {
+	font-family: 'Helvetica', sans-serif;
+}
+
 h1 {
-	font-family: 'Hind', sans-serif;
-	font-size: grid(1);
+	font-size: grid(2);
 	line-height: 1.25;
 	font-weight: 600;
 	& + p {
 		margin-top: rem(20);
 	}
 }
+h2 {
+	line-height: 1.25;
+}
+
+
 p {
 	line-height: 1.8;
 	font-size: rem(18);
@@ -22,13 +30,10 @@ p {
 }
 
 a {
-	font-family: 'PT Mono', monospace;
+	font-family: 'Menlo', sans-serif;
+	text-decoration: none;
 }
 
 .font-medium {
 	font-weight: 500;
-}
-
-.monotype {
-	font-family: 'PT Mono', monospace;
 }

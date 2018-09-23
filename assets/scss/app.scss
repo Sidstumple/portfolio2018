@@ -1,58 +1,13 @@
-@import 'variables/index', 'colors/colors', 'henris', 'functions', 'components/index', 'typography/index', 'sections/index' ;
+@import
+'variables/index',
+'typography/embed',
+'colors/colors',
+'~henris/custom-output';
+$output: set-output(css,true);
 
-body{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
-}
-
-.container {
-	width: 100vw;
-	height: 100vh;
-}
-
-.page-active--contact {
-	color: color(White);
-	a {
-		color: color(White);
-	}
-}
-
-.navigation {
-	position: absolute;
-	width: grid(10);
-	right: grid(2);
-	top: grid(1);
-	&__list{
-		display: flex;
-		justify-content: space-between;
-		flex-direction: row;
-	}
-	&__item{
-		list-style-type: none;
-	}
-}
-
-
-
-.sidebar {
-	z-index: 3;
-	position: absolute;
-	top: grid(4);
-	right: grid(1);
-	width: auto;
-	display: flex;
-	align-items: center;
-	writing-mode: vertical-rl;
-	p {
-		font-size: rem(16);
-	}
-}
-
-
-.block {
-	display: block;
-}
+@import
+'~henris',
+'functions',
+'components/index',
+'typography/index';
+// 'sections/index';

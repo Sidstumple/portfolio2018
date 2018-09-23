@@ -1,0 +1,18 @@
+$font-primary: (
+	font-family: (
+		Menlo,
+		sans-serif
+	),
+	load: true,
+	weights: (
+		"Regular": 400
+	),
+	weight-classes: false,
+	path: "/fonts",
+	files: (
+		"ttf"
+	),
+	types: (
+		"normal",
+	)
+);

@@ -25,14 +25,20 @@ module.exports = {
 	/*
 	** Customize the progress bar color
 	*/
-	loading: { color: '#3B8070' },
+	loading: { color: '#000' },
 	/*
 	** Build configuration
 	*/
-	plugins: [{
-		src: '~plugins/svgicon.js',
-		ssr: 'false'
-	}],
+	plugins: [
+		{
+			src: '~plugins/svgicon.js',
+			ssr: 'false'
+		},
+		{
+			src: '~plugins/vue-translate-on-scroll',
+			ssr: false
+		}
+	],
 	build: {
 		postcss: {
 			plugins: {

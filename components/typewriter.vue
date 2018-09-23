@@ -1,12 +1,14 @@
 <template>
 	<div class="typewriter__title" ref="typeWriterTitle" >
-		<h1 :class="{caret: caret}" :text="heading" :wait="wait" :aria-label="heading">{{ headingText }}</h1>
+		<h1 v-if="headingType == 'h1'" :class="{caret: caret}" :text="heading" :aria-label="heading">{{ headingText }}</h1>
+		<h2 v-if="headingType == 'h2'" :class="{caret: caret}" :text="heading" :aria-label="heading">{{ headingText }}</h2>
 	</div>
+
 </template>
 
 <script>
 export default {
-	props: ['delay', 'heading', 'wait'],
+	props: ['delay', 'heading', 'wait', 'headingType'],
 	data() {
 		return {
 			headingText: '',
@@ -21,10 +23,10 @@ export default {
 		}
 	},
 	mounted() {
-		let self = this;
-		if(self._props.wait != true){
-			self.type();
-		}
+		// let self = this;
+		// if(self._props.wait != true){
+		// }
+		this.type();
 	},
 	methods:{
 		type: function(){

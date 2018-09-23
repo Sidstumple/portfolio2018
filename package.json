@@ -11,10 +11,10 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-		"generate-icons": "vsvg -s ./assets/svg-icons -t ./assets/icons"
+    "generate-icons": "vsvg -s ./assets/svg-icons -t ./assets/icons"
   },
   "dependencies": {
-    "henris": "^0.2.3",
+    "henris": "^0.3.5",
     "matise-grid": "^1.1.8",
     "nuxt": "^1.0.0",
     "postcss": "^6.0.22",
@@ -27,7 +27,7 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.3",
     "sass-loader": "^7.0.1"
   }
 }
