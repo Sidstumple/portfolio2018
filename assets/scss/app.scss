@@ -5,9 +5,5 @@
 '~henris/custom-output';
 $output: set-output(css,true);
 
-@import
-'~henris',
-'functions',
-'components/index',
-'typography/index';
+@import '~henris', 'functions', 'components/index', 'typography/index';
 // 'sections/index';

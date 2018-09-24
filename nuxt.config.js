@@ -37,6 +37,10 @@ module.exports = {
 		{
 			src: '~plugins/vue-translate-on-scroll',
 			ssr: false
+		},
+		{
+			src: '~plugins/vue-slider',
+			ssr: false
 		}
 	],
 	build: {

@@ -8,10 +8,10 @@
 
 		<ul class="header__navigation">
 			<li class="header__nav-item">
-				<nuxt-link class="background--code" to="/work">/work</nuxt-link>
+				<nuxt-link to="/work">/work</nuxt-link>
 			</li>
 			<li class="header__nav-item">
-				<nuxt-link class="background--code" to="/contact">/contact</nuxt-link>
+				<nuxt-link to="/contact">/contact</nuxt-link>
 			</li>
 		</ul>
 	</nav>
@@ -39,7 +39,6 @@ export default {};
 	}
 	&__nav-item {
 		a {
-			color: hotpink;
 			padding: 2px;
 		}
 		& + li {

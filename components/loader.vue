@@ -23,7 +23,6 @@ export default {
 			self.hide = true;
 		},2010);
 		setInterval(function() {
-			console.log(self.progress);
 			if (self.progress != 200) {
 				self.progress++;
 			}

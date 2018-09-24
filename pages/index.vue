@@ -10,12 +10,19 @@
 				<div class="intro__image-inner" style="background-image: url('/img/cyd.jpg')" v-translate-on-scroll="{amount: 2}" :style="`transform: translateY(calc(${translateY}))`"></div>
 			</div>
 		</div>
-		<section class="row">
-			<p>Heeee hallo</p>
-			<p>Heeee hallo</p>
-			<p>Heeee hallo</p>
-			<p>Heeee hallo</p>
-			<p>Heeee hallo</p>
+		<section class="slider row" v-slider="{widths: { min: 240, responsive: 6}, spacing: {min: 20, responsive: 1}, offset: {min: 20}}">
+			<div class="slide small-full large-8 column">
+				<div class="slide-inner" style="background-image: url('/img/cyd.jpg')"></div>
+			</div>
+			<div class="slide small-full large-8 column">
+				<div class="slide-inner" style="background-image: url('/img/cyd.jpg')"></div>
+			</div>
+			<div class="slide small-full large-8 column">
+				<div class="slide-inner" style="background-image: url('/img/cyd.jpg')"></div>
+			</div>
+			<div class="slide small-full large-8 column">
+				<div class="slide-inner" style="background-image: url('/img/cyd.jpg')"></div>
+			</div>
 		</section>
 	</div>
 </template>
@@ -66,6 +73,26 @@ export default {
 			background-size: 150%;
 			background-position: center;
 			background-repeat: no-repeat;
+		}
+	}
+}
+
+.slider {
+	.slide{
+		width: grid(6);
+		height: grid(6);
+		min-width: 240px;
+		min-height: 240px;
+		&-inner {
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+		}
+		&+ .slide {
+			margin-left: grid(1);
+			@media #{$small-only} {
+				margin-left: 20px;
+			}
 		}
 	}
 }
