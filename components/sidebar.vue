@@ -7,9 +7,7 @@
 <style lang="scss">
 @import 'henris';
 	.sidebar {
-		p{
-			font-size: 14px;
-		}
+		z-index: 5;
 		position: fixed;
 		pointer-events: none;
 		writing-mode: vertical-lr;
@@ -18,5 +16,8 @@
 		top: 50%;
 		transform: translateY(-50%);
 		white-space: nowrap;
+		p{
+			font-size: 14px;
+		}
 	}
 </style>

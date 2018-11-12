@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 	<section class="container" :class="`text-${text} page-active--${activePage}`">
 
 		<div class="filter" :class="`bg-${background} pos--${position}`">
@@ -12,7 +12,7 @@
 					</feComponentTransfer>
 				</filter>
 				<circle cx="90vw" cy="100vh" r="50vw" :fill="color"> </circle>
-				<image x="0" y="0" style="filter: url(#duotone)" width="100%" height="100vh" xlink:href="~/assets/img/cydBW.png"/>
+				<image x="0" y="0" style="filter: url(#duotone)" width="100%" height="100vh" xlink:href="/img/cydBW.png"/>
 			</svg>
 		</div>
 
@@ -47,14 +47,14 @@
 						<p><span class="monotype block">Viacom</span>Out of office generator</p>
 					</div>
 					<div class="image image--viacom">
-						<img src="~/assets/img/hero_viacom.jpg"/>
+						<img src="/img/hero_viacom.jpg"/>
 					</div>
 				</section>
 
 				<div class="column work__items--small">
 					<section class="work__item">
 						<div class="image image--bag">
-							<img src="~/assets/img/bag.jpg"/>
+							<img src="/img/bag.jpg"/>
 						</div>
 						<div class="text text--bag">
 							<p><span class="monotype block">Matise</span>Design system</p>
@@ -62,7 +62,7 @@
 					</section>
 					<section class="work__item">
 						<div class="image image--matise">
-							<img src="~/assets/img/matise.jpg"/>
+							<img src="/img/matise.jpg"/>
 						</div>
 						<div class="text text--matise">
 							<p><span class="monotype block">Matise</span>Website 2018</p>
@@ -203,4 +203,4 @@ export default {
 	},
 
 };
-</script>
+</script> -->

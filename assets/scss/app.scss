@@ -7,3 +7,10 @@ $output: set-output(css,true);
 
 @import '~henris', 'functions', 'components/index', 'typography/index';
 // 'sections/index';
+body, html {
+	background: white;
+}
+
+.row.space-between {
+	justify-content: space-between;
+}

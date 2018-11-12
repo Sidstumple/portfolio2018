@@ -1,39 +1,46 @@
 <template>
-	<div class="row intro">
-		<div class="row intro__container">
-			<section class="column small-full large-8 intro__title">
-				<h1>Hi,</h1>
-				<typewriter heading-type="h2" heading="I'm Cyd, a web developer from Amsterdam." />
-				<p>In 2018 I graduated from the University of Applied Sciences in Amsterdam and got my BaSc in Communication and Multimedia Design.</p>
-			</section>
-			<div class="intro__image small-full large-8 column">
-				<div class="intro__image-inner" style="background-image: url('/img/cyd.jpg')" v-translate-on-scroll="{amount: 2}" :style="`transform: translateY(calc(${translateY}))`"></div>
+	<div class="row">
+		<div class="row intro">
+			<div class="row intro__container">
+				<section class="column small-full large-8 intro__text">
+					<div class="intro__left-text">
+						<p class="text--lloyd smaller">
+							<strong class="text--yellow">Cyd Stumpel</strong><br>
+							Amsterdam<br>
+							15.04.1994
+						</p>
+					</div>
+					<div class="intro__right-text">
+						<h1>Hi,</h1>
+						<h2>I'm Cyd, a web developer from Amsterdam.</h2>
+						<p>In 2018 I graduated from the University of Applied Sciences in Amsterdam and got my BaSc in Communication and Multimedia Design.</p>
+						<p>I started as an intern in August 2017 at Matise Amsterdam, where I've been working full-time since July 2018.</p>
+					</div>
+				</section>
+				<div class="intro__image small-full large-10 column">
+					<div class="intro__image-inner" style="background-image: url('/img/cyd.jpg')" v-translate-on-scroll="{amount: 2}" :style="`transform: translateY(calc(${translateY}))`"></div>
+				</div>
 			</div>
 		</div>
-		<section class="slider row" v-slider="{widths: { min: 240, responsive: 6}, spacing: {min: 20, responsive: 1}, offset: {min: 20}}">
-			<div class="slide small-full large-8 column">
-				<div class="slide-inner" style="background-image: url('/img/cyd.jpg')"></div>
+		<div class="content-block row">
+			<div class="content-block__text row">
+				<div class="text--flip column small-22 medium-2 ">
+					<h1>Nog een titel en nog een beetje over mij</h1>
+				</div>
+				<div class="content-block__body column small-22 medium-20 large-10">
+					<p>In 2018 I graduated from the University of Applied Sciences in Amsterdam and got my BaSc in Communication and Multimedia Design.</p>
+					<p>In 2018 I graduated from the University of Applied Sciences in Amsterdam and got my BaSc in Communication and Multimedia Design.</p>
+					<p>In 2018 I graduated from the University of Applied Sciences in Amsterdam and got my BaSc in Communication and Multimedia Design.</p>
+				</div>
 			</div>
-			<div class="slide small-full large-8 column">
-				<div class="slide-inner" style="background-image: url('/img/cyd.jpg')"></div>
-			</div>
-			<div class="slide small-full large-8 column">
-				<div class="slide-inner" style="background-image: url('/img/cyd.jpg')"></div>
-			</div>
-			<div class="slide small-full large-8 column">
-				<div class="slide-inner" style="background-image: url('/img/cyd.jpg')"></div>
-			</div>
-		</section>
+
+		</div>
 	</div>
 </template>
 
 <script>
-import Typewriter from '~/components/typewriter';
 
 export default {
-	components: {
-		Typewriter
-	},
 	data() {
 		return {
 			translateY: '(100vh / 24) * 2'
@@ -42,17 +49,26 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import 'henris';
 .intro{
-	position: relative;
-	min-height: grid(12);
-	top: grid(2);
+	margin-top: grid(2);
+	height: 100%;
 	&__container {
 		width: grid(20);
+		align-items: center;
 	}
-	&__title {
+	&__left-text {
+		text-align: right;
+		white-space: nowrap;
+		padding-top: 10px;
+	}
+	&__right-text {
+		padding-left: grid(.5);
+	}
+	&__text {
 		position: relative;
+		display: flex;
 		z-index: 2;
 		min-height: 250px;
 	}
@@ -60,6 +76,8 @@ export default {
 		overflow: hidden;
 		position: relative;
 		z-index: 1;
+		width: grid(10);
+		height: grid(12);
 		margin-left: grid(2);
 		@media #{$medium-down}{
 			margin-left: 0;
@@ -70,30 +88,24 @@ export default {
 			top: grid(-1);
 			width: 100%;
 			height: 100%;
-			background-size: 150%;
-			background-position: center;
+			background-size: cover;
+			background-position: left center;
 			background-repeat: no-repeat;
 		}
 	}
 }
-
-.slider {
-	.slide{
-		width: grid(6);
-		height: grid(6);
-		min-width: 240px;
-		min-height: 240px;
-		&-inner {
-			width: 100%;
-			height: 100%;
-			display: inline-block;
-		}
-		&+ .slide {
-			margin-left: grid(1);
-			@media #{$small-only} {
-				margin-left: 20px;
-			}
-		}
+.content-block {
+	&__text {
+		margin: grid(4 4 0);
 	}
+	&__body {
+		padding-left: grid(1);
+	}
+}
+
+.text--flip {
+	writing-mode: vertical-rl;
+	width: max-content;
+	height: 700px;
 }
 </style>

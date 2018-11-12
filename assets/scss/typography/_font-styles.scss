@@ -8,21 +8,31 @@ p {
 
 
 h1 {
-	font-size: grid(2);
+	font-family: 'Sinanova', serif;
+	font-size: grid(1);
 	line-height: 1.25;
 	font-weight: 600;
+	@include min-("font-size", 1, 40);
 	& + p {
-		margin-top: rem(20);
+		margin-top: 2rem;
+	}
+	& + h2 {
+		margin-top: grid(.5);
 	}
 }
 h2 {
+	font-size: grid(20/60);
+	@include min-("font-size", 20/60, 18);
 	line-height: 1.25;
+	& + p {
+		margin-top: 2rem;
+	}
 }
 
 
 p {
 	line-height: 1.8;
-	font-size: rem(18);
+	font-size: 1rem;
 	font-weight: 400;
 	&+p, &+ a {
 		margin-top: rem(30);

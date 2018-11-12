@@ -1,33 +1,34 @@
 {
-  "name": "portfolio-2018",
-  "version": "1.0.0",
-  "description": "Portfolio Cyd Stumpel 2018",
-  "author": "Cyd Stumpel",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint",
-    "generate-icons": "vsvg -s ./assets/svg-icons -t ./assets/icons"
-  },
-  "dependencies": {
-    "henris": "^0.3.5",
-    "matise-grid": "^1.1.8",
-    "nuxt": "^1.0.0",
-    "postcss": "^6.0.22",
-    "postcss-cssnext": "^3.1.0",
-    "vue-svgicon": "^3.0.4"
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.15.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0",
-    "node-sass": "^4.9.3",
-    "sass-loader": "^7.0.1"
-  }
+	"name": "portfolio-2018",
+	"version": "1.0.0",
+	"description": "Portfolio Cyd Stumpel 2018",
+	"author": "Cyd Stumpel",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate",
+		"lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+		"lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+		"precommit": "npm run lint",
+		"generate-icons": "vsvg -s ./assets/svg-icons -t ./assets/icons"
+	},
+	"dependencies": {
+		"henris": "^0.3.9",
+		"matise-grid": "^1.1.8",
+		"nuxt": "^1.4.4",
+		"postcss": "^6.0.23",
+		"postcss-cssnext": "^3.1.0",
+		"vue-svgicon": "^3.2.1"
+	},
+	"devDependencies": {
+		"babel-eslint": "^8.2.6",
+		"eslint": "^4.15.0",
+		"eslint-friendly-formatter": "^3.0.0",
+		"eslint-loader": "^1.7.1",
+		"eslint-plugin-vue": "^4.7.1",
+		"node-sass": "^4.9.4",
+		"sass-loader": "^7.1.0"
+	}
 }

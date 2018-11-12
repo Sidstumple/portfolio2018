@@ -41,6 +41,10 @@ module.exports = {
 		{
 			src: '~plugins/vue-slider',
 			ssr: false
+		},
+		{
+			src: '~plugins/slides',
+			ssr: true
 		}
 	],
 	build: {
@@ -64,8 +68,8 @@ module.exports = {
 					test: /\.(js|vue)$/,
 					loader: 'eslint-loader',
 					exclude: /(node_modules)/
-				})
+				});
 			}
 		}
 	}
-}
+};
