@@ -14,3 +14,24 @@ body, html {
 .row.space-between {
 	justify-content: space-between;
 }
+
+.forward-slash {
+	position: relative;
+	&:before {
+		content: '';
+		transition: 0.4s ease-out;
+		position: absolute;
+		height: 12px;
+		width: 1px;
+		background: color(Black);
+		transform: rotate(90deg);
+		bottom: 3px;
+		left: -10px;
+	}
+	&:hover {
+		&:before {
+			left: -5px;
+			transform: rotate(15deg);
+		}
+	}
+}

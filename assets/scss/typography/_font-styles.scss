@@ -10,9 +10,10 @@ p {
 h1 {
 	font-family: 'Sinanova', serif;
 	font-size: grid(1);
-	line-height: 1.25;
+	line-height: 1;
 	font-weight: 600;
-	@include min-("font-size", 1, 40);
+	@include min-("font-size", 2, 50);
+	@include max-("font-size", 2, 80);
 	& + p {
 		margin-top: 2rem;
 	}
@@ -39,9 +40,13 @@ p {
 	}
 }
 
-a {
+a{
 	text-decoration: none;
-	font-size: rem(14);
+	&:not([class])[href] {
+		font-size: rem(14);
+		color: color(Yellow);
+		font-weight: 500;
+	}
 }
 
 .font-medium {

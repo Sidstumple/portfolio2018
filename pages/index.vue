@@ -1,39 +1,37 @@
 <template>
 	<div class="row">
 		<div class="row intro">
-			<div class="row intro__container">
-				<section class="column small-full large-8 intro__text">
-					<div class="intro__left-text">
-						<p class="text--lloyd smaller">
-							<strong class="text--yellow">Cyd Stumpel</strong><br>
-							Amsterdam<br>
-							15.04.1994
-						</p>
-					</div>
+			<div class="row intro__container center">
+				<section class="column small-22 medium-10 large-9 intro__text">
 					<div class="intro__right-text">
-						<h1>Hi,</h1>
+						<h1>Hi, 👩🏽‍💻</h1>
 						<h2>I'm Cyd, a web developer from Amsterdam.</h2>
 						<p>In 2018 I graduated from the University of Applied Sciences in Amsterdam and got my BaSc in Communication and Multimedia Design.</p>
 						<p>I started as an intern in August 2017 at Matise Amsterdam, where I've been working full-time since July 2018.</p>
 					</div>
 				</section>
-				<div class="intro__image small-full large-10 column">
+				<div class="intro__image small-full medium-8 large-9 column">
 					<div class="intro__image-inner" style="background-image: url('/img/cyd.jpg')" v-translate-on-scroll="{amount: 2}" :style="`transform: translateY(calc(${translateY}))`"></div>
 				</div>
 			</div>
 		</div>
 		<div class="content-block row">
 			<div class="content-block__text row">
-				<div class="text--flip column small-22 medium-2 ">
-					<h1>Nog een titel en nog een beetje over mij</h1>
+				<div class="text--flip column small-22 medium-6 large-2 ">
+					<h1 v-translate-on-scroll="{amount: 2}" :style="`transform: translateY(calc(${translateY}))`"><span class="text--yellow">Critical thinker</span> and crazy about details.</h1>
 				</div>
-				<div class="content-block__body column small-22 medium-20 large-10">
-					<p>In 2018 I graduated from the University of Applied Sciences in Amsterdam and got my BaSc in Communication and Multimedia Design.</p>
-					<p>In 2018 I graduated from the University of Applied Sciences in Amsterdam and got my BaSc in Communication and Multimedia Design.</p>
-					<p>In 2018 I graduated from the University of Applied Sciences in Amsterdam and got my BaSc in Communication and Multimedia Design.</p>
+				<div class="content-block__body column small-22 medium-18 large-13" v-translate-on-scroll="{amount: 1}" :style="`transform: translateY(calc(${translateY}))`">
+					<p>I pride myself on being a critical thinker and always considering the user first. I love making websites as smooth as possible, which includes focusing on the tiniest details.</p>
+					<p>During the minor Web Development I got very interested in inclusive design, taking all abilities in consideration whilst developing.</p>
+					<p>At Matise I've had the opportunity to create websites for amazing companies like Amnesty International and Viacom.</p>
 				</div>
 			</div>
-
+		</div>
+		<div class="instagram row space-between">
+			<h1 class="row instagram__title">I have quite an escalated hobby on instagram:</h1>
+			<div class="column background--red instagram__post"></div>
+			<div class="column background--red instagram__post"></div>
+			<div class="column background--red instagram__post"></div>
 		</div>
 	</div>
 </template>
@@ -55,18 +53,10 @@ export default {
 	margin-top: grid(2);
 	height: 100%;
 	&__container {
-		width: grid(20);
 		align-items: center;
 	}
-	&__left-text {
-		text-align: right;
-		white-space: nowrap;
-		padding-top: 10px;
-	}
-	&__right-text {
-		padding-left: grid(.5);
-	}
 	&__text {
+		margin-bottom: grid(1);
 		position: relative;
 		display: flex;
 		z-index: 2;
@@ -76,10 +66,13 @@ export default {
 		overflow: hidden;
 		position: relative;
 		z-index: 1;
-		width: grid(10);
 		height: grid(12);
-		margin-left: grid(2);
+		margin-left: grid(1);
 		@media #{$medium-down}{
+			height: grid(8);
+		}
+		@media #{$small-only}{
+			height: grid(14);
 			margin-left: 0;
 		}
 		&-inner {
@@ -89,23 +82,44 @@ export default {
 			width: 100%;
 			height: 100%;
 			background-size: cover;
-			background-position: left center;
+			background-position: left bottom;
 			background-repeat: no-repeat;
 		}
 	}
 }
 .content-block {
 	&__text {
-		margin: grid(4 4 0);
+		margin: grid(3 0 4 5);
+		@media #{$medium-down} {
+			margin: grid(3 2 2);
+		}
 	}
 	&__body {
 		padding-left: grid(1);
+		max-width: 30rem;
 	}
 }
 
 .text--flip {
 	writing-mode: vertical-rl;
 	width: max-content;
-	height: 700px;
+	height: grid(9);
+	@media #{$medium-down}{
+		writing-mode: initial;
+		width: grid(18);
+		height: auto;
+		padding-bottom: grid(3);
+	}
+}
+.instagram {
+	display: none;
+	width: grid(20);
+	&__title {
+		padding-bottom: grid(1);
+	}
+	&__post {
+		width: grid(6);
+		height: grid(6);
+	}
 }
 </style>

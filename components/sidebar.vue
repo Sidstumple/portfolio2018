@@ -19,5 +19,8 @@
 		p{
 			font-size: 14px;
 		}
+		@media #{$medium-down} {
+			display: none;
+		}
 	}
 </style>

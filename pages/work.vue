@@ -8,9 +8,6 @@
 				<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
 			</div>
 		</div>
-		<div class="row">
-			<slider :slides="slides" :settings="sliderSettings" slider-type="Work" slider-class="slider__work row"></slider>
-		</div>
 		<section class="row body-text">
 			<div class="column medium-10 small-22">
 				<h1>He hallo titeltje</h1>
@@ -22,12 +19,8 @@
 </template>
 
 <script>
-import Slider from '~/components/slider/slider';
 
 export default {
-	components: {
-		Slider
-	},
 	data() {
 		return {
 			sliderSettings: {

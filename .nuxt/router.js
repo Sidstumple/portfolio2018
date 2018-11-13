@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const _486971ae = () => import('../pages/work.vue' /* webpackChunkName: "pages/work" */).then(m => m.default || m)
+const _6c156e90 = () => import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */).then(m => m.default || m)
 const _0499c75a = () => import('../pages/lator.vue' /* webpackChunkName: "pages/lator" */).then(m => m.default || m)
 const _2f1c246a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
@@ -69,6 +70,11 @@ export function createRouter () {
 			path: "/work",
 			component: _486971ae,
 			name: "work"
+		},
+		{
+			path: "/contact",
+			component: _6c156e90,
+			name: "contact"
 		},
 		{
 			path: "/lator",

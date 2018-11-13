@@ -1,6 +1,6 @@
 <template>
 	<nav class="header">
-		<div class="row column small-22 medium-18 large-16 space-between">
+		<div class="row column small-22 large-19 space-between">
 			<h1 class="header__logo">
 				<nuxt-link to="/">
 					<img src="/img/cyd.svg" alt="logo Cyd"/>
@@ -8,11 +8,11 @@
 			</h1>
 
 			<ul class="header__navigation">
+				<!-- <li class="header__nav-item">
+					<nuxt-link class="forward-slash" to="/work">work</nuxt-link>
+				</li> -->
 				<li class="header__nav-item">
-					<nuxt-link to="/work">work</nuxt-link>
-				</li>
-				<li class="header__nav-item">
-					<nuxt-link to="/contact">contact</nuxt-link>
+					<nuxt-link class="forward-slash" to="/contact">contact</nuxt-link>
 				</li>
 			</ul>
 		</div>
@@ -47,26 +47,8 @@ $special-easing: cubic-bezier(0.7, -0.3, 0.3, 1);
 	}
 	&__nav-item {
 		a {
-			position: relative;
 			transition: 0.4s ease-out;
 			padding: 2px;
-			&:before {
-				content: '';
-				transition: 0.4s ease-out;
-				position: absolute;
-				height: 12px;
-				width: 1px;
-				background: color(Black);
-				transform: rotate(90deg);
-				bottom: 3px;
-				left: -10px;
-			}
-			&:hover {
-				&:before {
-					left: -5px;
-					transform: rotate(15deg);
-				}
-			}
 		}
 		& + li {
 			margin-left: 2rem;
