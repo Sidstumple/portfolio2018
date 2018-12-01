@@ -2,7 +2,7 @@
 	<section class="row content-image-right">
 		<div class="row content-image-right__container center">
 			<div class="column small-full medium-10 large-9 content-image-right__text">
-				<h1>{{ title }}</h1>
+				<h1 class="serif">{{ title }}</h1>
 				<h2>{{ subtitle }}</h2>
 				<slot />
 			</div>

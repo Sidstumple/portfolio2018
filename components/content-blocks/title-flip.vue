@@ -2,9 +2,9 @@
 	<section class="title-flip">
 		<div class="title-flip__text row">
 			<div class="text--flip column small-full medium-10 large-6 ">
-				<h1 v-translate-on-scroll="{amount: 2}" :style="`transform: translateY(calc(${translateY}))`" v-html="title"></h1>
+				<h1 class="serif" v-translate-on-scroll="{amount: 2}" :style="`transform: translateY(calc(${translateY}))`" v-html="title"></h1>
 			</div>
-			<div class="title-flip__body column small-full medium-18 large-13" v-translate-on-scroll="{amount: 1}" :style="`transform: translateY(calc(${translateY}))`">
+			<div class="title-flip__body column small-full medium-18 large-16" v-translate-on-scroll="{amount: 1}" :style="`transform: translateY(calc(${translateY}))`">
 				<slot />
 			</div>
 		</div>

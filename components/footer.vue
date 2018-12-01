@@ -14,7 +14,7 @@ export default {
 <style lang="scss">
 @import 'henris';
 .footer {
-	padding: grid(1 0);
+	padding: grid(2 0 1);
 	p + a {
 		margin-top: 0;
 	}

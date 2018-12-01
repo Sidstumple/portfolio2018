@@ -5,7 +5,7 @@ Vue.use(Router)
 
 const _486971ae = () => import('../pages/work.vue' /* webpackChunkName: "pages/work" */).then(m => m.default || m)
 const _6c156e90 = () => import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */).then(m => m.default || m)
-const _0499c75a = () => import('../pages/lator.vue' /* webpackChunkName: "pages/lator" */).then(m => m.default || m)
+const _0f6449a5 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
 const _2f1c246a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
@@ -77,9 +77,9 @@ export function createRouter () {
 			name: "contact"
 		},
 		{
-			path: "/lator",
-			component: _0499c75a,
-			name: "lator"
+			path: "/about",
+			component: _0f6449a5,
+			name: "about"
 		},
 		{
 			path: "/",

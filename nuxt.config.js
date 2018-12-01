@@ -40,10 +40,6 @@ module.exports = {
 			ssr: false
 		},
 		{
-			src: '~plugins/vue-slider',
-			ssr: false
-		},
-		{
 			src: '~plugins/slides',
 			ssr: true
 		}

@@ -1,5 +1,5 @@
-* {
-	font-family: 'HelveticaNeue', sans-serif;
+body {
+	font-family: 'Helvetica Neue', sans-serif;
 }
 
 p {
@@ -8,7 +8,6 @@ p {
 
 
 h1 {
-	font-family: 'Sinanova', serif;
 	font-size: grid(1);
 	line-height: 1;
 	font-weight: 600;
@@ -19,6 +18,15 @@ h1 {
 	}
 	& + h2 {
 		margin-top: grid(.5);
+		@media #{$medium-down} {
+			margin-top: rem(20);
+		}
+	}
+	& + .row {
+		margin-top: grid(.5);
+		@media #{$medium-down} {
+			margin-top: rem(20);
+		}
 	}
 }
 h2 {
@@ -30,13 +38,20 @@ h2 {
 	}
 }
 
+h5 {
+	font-size: 1rem;
+	& + h1 {
+		margin-top: 5px;
+	}
+}
+
 
 p {
 	line-height: 1.8;
 	font-size: 1rem;
 	font-weight: 400;
 	&+p, &+ a {
-		margin-top: rem(30);
+		margin-top: rem(20);
 	}
 }
 
@@ -51,4 +66,17 @@ a{
 
 .font-medium {
 	font-weight: 500;
+}
+
+.serif {
+	font-family: 'Sinanova', serif;
+}
+
+.sans-serif {
+	font-family: 'HelveticaNeue', serif;
+}
+
+
+.row + .row {
+	margin-top: rem(40);
 }
