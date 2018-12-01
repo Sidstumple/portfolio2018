@@ -1,14 +1,12 @@
 <template>
 	<section class="row content-image-right">
 		<div class="row content-image-right__container center">
-			<div class="column small-22 medium-10 large-9 content-image-right__text">
+			<div class="column small-full medium-10 large-9 content-image-right__text">
 				<h1>{{ title }}</h1>
 				<h2>{{ subtitle }}</h2>
 				<slot />
 			</div>
-			<div class="content-image-right__image small-full medium-8 large-9 column">
-				<div class="content-image-right__image-inner" v-translate-on-scroll="{amount: 2}" :style="`background-image: url('${imageUrl}'); transform: translateY(calc(${translateY}))`"></div>
-			</div>
+			<div class="content-image-right__image small-full medium-8 large-9 column" v-translate-on-scroll="{amount: 2}" :style="`background-image: url('${imageUrl}'); transform: translateY(calc(${translateY}))`"></div>
 		</div>
 	</section>
 </template>
@@ -34,6 +32,9 @@ export default {
 		z-index: 2;
 		min-height: 250px;
 		flex-direction: column;
+		@media #{$small-only} {
+			padding: 0 1rem;
+		}
 	}
 	&__image {
 		overflow: hidden;
@@ -41,22 +42,18 @@ export default {
 		z-index: 1;
 		height: grid(12);
 		margin-left: grid(1);
+		top: -25%;
+		background-size: cover;
+		background-position: 10% center;
+		background-repeat: no-repeat;
+		transition: .4s ease-out;
 		@media #{$medium-down}{
 			height: grid(8);
 		}
 		@media #{$small-only}{
-			height: grid(14);
+			height: grid(24);
 			margin-left: 0;
-		}
-		&-inner {
-			transition: .4s ease-out;
-			position: absolute;
-			top: grid(-1);
-			width: 100%;
-			height: 100%;
-			background-size: cover;
-			background-position: left bottom;
-			background-repeat: no-repeat;
+			margin-top: rem(80);
 		}
 	}
 }

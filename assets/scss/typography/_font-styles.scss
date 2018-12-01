@@ -12,8 +12,8 @@ h1 {
 	font-size: grid(1);
 	line-height: 1;
 	font-weight: 600;
-	@include min-("font-size", 2, 50);
-	@include max-("font-size", 2, 80);
+	@include min-("font-size", 1, 50);
+	@include max-("font-size", 1, 80);
 	& + p {
 		margin-top: 2rem;
 	}
@@ -22,8 +22,8 @@ h1 {
 	}
 }
 h2 {
-	font-size: grid(20/60);
-	@include min-("font-size", 20/60, 18);
+	font-size: grid(32/60);
+	@include min-("font-size", 32/60, 24);
 	line-height: 1.25;
 	& + p {
 		margin-top: 2rem;
