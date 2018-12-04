@@ -2,6 +2,9 @@ module.exports = {
 	/*
 	** Headers of the page
 	*/
+	router: {
+		linkActiveClass: 'nav__link--active'
+	},
 	mode: 'spa',
 	head: {
 		title: 'Portfolio Cyd Stumpel',

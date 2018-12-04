@@ -54,8 +54,8 @@ export default {
 		return {
 			intro: {
 				title: 'Hi, 👩🏽‍💻',
-				subtitle: `I'm Cyd, a web developer from Amsterdam.`,
-				image: `img/cyd.jpg`
+				subtitle: 'I\'m Cyd, a web developer from Amsterdam.',
+				image: 'img/cyd.jpg'
 			},
 			more: {
 				title: '<span class="text--yellow">Critical thinker</span> and crazy about details.'

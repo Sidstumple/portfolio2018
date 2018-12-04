@@ -8,20 +8,16 @@
 			</h1>
 
 			<ul class="header__navigation">
-				<li class="header__nav-item">
-					<nuxt-link class="forward-slash" to="/about">about</nuxt-link>
+				<li class="nav__item">
+					<nuxt-link class="nav__link" to="/about">about</nuxt-link>
 				</li>
-				<li class="header__nav-item">
-					<nuxt-link class="forward-slash" to="/contact">contact</nuxt-link>
+				<li class="nav__item">
+					<nuxt-link class="nav__link" to="/contact">contact</nuxt-link>
 				</li>
 			</ul>
 		</div>
 	</nav>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style lang="scss">
 @import 'henris';
@@ -41,20 +37,40 @@ $special-easing: cubic-bezier(0.7, -0.3, 0.3, 1);
 			display: inline-block;
 			transition: .4s $special-easing;
 			&:hover {
-				transform: rotate(45deg);
+				transform: rotate(15deg);
 			}
 		}
 	}
 	&__navigation {
 		display: flex;
-	}
-	&__nav-item {
-		a {
-			transition: 0.4s ease-out;
-			padding: 2px;
-		}
-		& + li {
-			margin-left: 2rem;
+		.nav {
+			&__item {
+				& + li {
+					margin-left: 2rem;
+				}
+			}
+			&__link {
+				transition: 0.4s ease-out;
+				padding-left: 2px;
+				position: relative;
+				&:before {
+					content: '';
+					transition: 0.4s ease-out;
+					position: absolute;
+					height: 14px;
+					width: 1px;
+					background: color(Black);
+					transform: rotate(90deg);
+					bottom: 2px;
+					left: -10px;
+				}
+				&:hover, &--active {
+					&:before {
+						left: -2px;
+						transform: rotate(20deg);
+					}
+				}
+			}
 		}
 	}
 }

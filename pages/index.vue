@@ -5,8 +5,8 @@
 
 			<div class="row">
 				<div class="photo__grid row space-between">
-					<div class="photo__item column medium-11 small-full" v-translate-on-scroll="{amount: 2}" :style="`background-image: url('img/desk.jpg');transform: translateY(calc(${translateY}))`"></div>
-					<div class="photo__item column medium-11 small-full" v-translate-on-scroll="{amount: 1}" :style="`background-image: url('img/wv.png');transform: translateY(calc(${translateY}))`"></div>
+					<div class="photo__item column medium-11 small-full" v-translate-on-scroll="{amount: 2}" :style="`background-image: url('img/cyd.jpg'); transform: translateY(calc(${translateY}))`"></div>
+					<div class="photo__item column medium-11 small-full" v-translate-on-scroll="{amount: 1}" :style="`background-image: url('img/wv.png'); transform: translateY(calc(${translateY}))`"></div>
 				</div>
 			</div>
 
@@ -41,8 +41,8 @@ export default {
 	data() {
 		return {
 			intro: {
-				left: `This is for <span class="text--yellow hover-">everyone</span>`,
-				right: `I'm a <span class="text--yellow">web developer</span> from Amsterdam. 👩🏽‍💻 I make accessible and inclusive websites and focus on the details, because I believe the web is <span class="text--yellow">for everyone.</span>`
+				left: 'This is for <span class="text--yellow hover-">everyone</span>',
+				right: 'I\'m a <span class="text--yellow">web developer</span> from Amsterdam. 👩🏽‍💻 I make accessible and inclusive websites and focus on the details, because I believe the web is <span class="text--yellow">for everyone.</span>'
 			},
 			translateY: '(100vh / 24)'
 		};

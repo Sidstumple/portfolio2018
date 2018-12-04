@@ -62,7 +62,7 @@ export function createRouter () {
   return new Router({
     mode: 'history',
     base: '/',
-    linkActiveClass: 'nuxt-link-active',
+    linkActiveClass: 'nav__link--active',
     linkExactActiveClass: 'nuxt-link-exact-active',
     scrollBehavior,
     routes: [
